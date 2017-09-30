@@ -5,7 +5,8 @@ const config = {
     entry: path.join(__dirname, 'src/Draggable.ts'),
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'draggable.bundle.js'
+        filename: 'draggable.bundle.js',
+        libraryTarget: 'umd'
     },
     resolve: {
         extensions: ['.js', '.json', '.ts']
@@ -23,7 +24,7 @@ const config = {
             inject: 'head'
         })
     ]
-}
+};
 
 if (process.env.NODE_ENV === 'dev') {
     config.output['libraryTarget'] = 'var';
