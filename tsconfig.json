@@ -2,7 +2,7 @@
     "compilerOptions": {
         "noImplicitAny": true,
         "target": "ES5",
-        "module": "system",
+        "module": "es6",
         "outDir": "dist",
         "sourceMap": true,
         "lib": [

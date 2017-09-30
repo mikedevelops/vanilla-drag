@@ -1,3 +1,1 @@
-const hello: string = 'hello';
-
-console.log(`${hello}, world!`);
+import Draggable from './services/Draggable';

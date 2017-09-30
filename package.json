@@ -4,7 +4,7 @@
   "description": "JavaScript draggable HTML elements",
   "main": "dist/index.js",
   "scripts": {
-    "watch": "webpack-dev-server",
+    "watch": "NODE_ENV=dev webpack-dev-server",
     "test": "jest",
     "test:watch": "jest --watch --coverage"
   },

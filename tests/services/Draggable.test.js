@@ -8,8 +8,8 @@ describe('Drag', () => {
     beforeEach(() => {
         windowMock = {
             addEventListener: jest.fn(),
-            innerWidth: 88,
-            innerHeight: 88
+            innerWidth: 50,
+            innerHeight: 50
         };
         element = {
             addEventListener: jest.fn(),
@@ -23,8 +23,6 @@ describe('Drag', () => {
 
     describe('init', () => {
         test('it should attach event handlers', () => {
-            drag.init();
-
             expect(windowMock.addEventListener).toHaveBeenCalled();
             expect(windowMock.addEventListener.mock.calls[0][0]).toEqual('mousemove');
             expect(element.addEventListener).toHaveBeenCalledTimes(2);
@@ -35,7 +33,7 @@ describe('Drag', () => {
 
     describe('handleMouseDown', () => {
         beforeEach(() => {
-            element.getBoundingClientRect.mockReturnValue({ left: 10, top: 10 });
+            element.getBoundingClientRect.mockReturnValue({ left: 10, top: 10, width: 10, height: 10 });
         });
 
         test('should set dragging state', () => {
@@ -61,18 +59,19 @@ describe('Drag', () => {
             drag.handleMouseMove({ pageX: 5, pageY: 5 });
 
             expect(drag.outOfBounds).toBeCalled();
-            expect(drag.outOfBounds).toBeCalledWith(5, 5, 0, 88, 0, 88);
+            expect(drag.outOfBounds).toBeCalledWith(5, 5, 0, 50, 0, 50);
             expect(drag.dragging).toBeFalsy();
         });
 
         test('should update element style if in bounds', () => {
             drag.outOfBounds.mockReturnValue(false);
             drag.origin = { x: 5, y: 5 };
+            drag.elementRectCache = { width: 10, height: 10 };
             drag.dragging = true;
             drag.handleMouseMove({ pageX: 10, pageY: 10 });
 
-            expect(element.style.left).toEqual('5px');
-            expect(element.style.top).toEqual('5px');
+            expect(element.style.right).toEqual('35px');
+            expect(element.style.bottom).toEqual('35px');
         });
     });
 
