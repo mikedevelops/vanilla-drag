@@ -3,7 +3,7 @@ interface Coordinate {
     y: number
 }
 
-export default class Draggable {
+class Draggable {
     private dragging: boolean;
     private origin: Coordinate;
     private elementRectCache: ClientRect;
@@ -79,3 +79,5 @@ export default class Draggable {
         return x <= boundsMinX || x >= boundsMaxX || y <= boundsMinY || y >= boundsMaxY;
     }
 }
+
+module.exports = Draggable;

@@ -2,7 +2,7 @@
     "compilerOptions": {
         "noImplicitAny": true,
         "target": "ES5",
-        "module": "es6",
+        "module": "commonjs",
         "outDir": "dist",
         "sourceMap": true,
         "lib": [

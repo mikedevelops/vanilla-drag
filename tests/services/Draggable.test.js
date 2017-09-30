@@ -1,4 +1,4 @@
-const Draggable = require('../../src/Draggable').default;
+const Draggable = require('../../src/Draggable');
 
 describe('Drag', () => {
     let drag;

@@ -7,7 +7,7 @@
     "watch": "NODE_ENV=dev webpack-dev-server",
     "test": "jest",
     "test:watch": "jest --watch --coverage",
-    "production": "NODE_ENV=production webpack -p"
+    "production": "npm run test && NODE_ENV=production webpack -p"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
   "homepage": "https://github.com/mikedevelops/draggable#readme",
   "devDependencies": {
     "@types/jest": "^21.1.1",
+    "@types/node": "^8.0.31",
     "eslint": "^4.8.0",
     "jest": "^21.2.1",
     "source-map-loader": "^0.2.2",
