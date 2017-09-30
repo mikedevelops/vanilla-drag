@@ -1,5 +1,5 @@
 {
-  "name": "draggable",
+  "name": "vanilla-drag",
   "version": "1.0.0",
   "description": "JavaScript draggable HTML elements",
   "main": "dist/index.js",
