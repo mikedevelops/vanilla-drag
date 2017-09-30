@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "watch": "webpack-dev-server",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch --coverage"
   },
   "repository": {
     "type": "git",
