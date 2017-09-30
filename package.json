@@ -6,7 +6,8 @@
   "scripts": {
     "watch": "NODE_ENV=dev webpack-dev-server",
     "test": "jest",
-    "test:watch": "jest --watch --coverage"
+    "test:watch": "jest --watch --coverage",
+    "production": "NODE_ENV=production webpack -p"
   },
   "repository": {
     "type": "git",
