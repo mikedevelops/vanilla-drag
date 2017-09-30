@@ -1,0 +1,52 @@
+{
+  "name": "draggable",
+  "version": "1.0.0",
+  "description": "JavaScript draggable HTML elements",
+  "main": "dist/index.js",
+  "scripts": {
+    "watch": "webpack-dev-server",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikedevelops/draggable.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "Drag",
+    "Drop",
+    "HTML",
+    "draggable"
+  ],
+  "author": "Michael Smart",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikedevelops/draggable/issues"
+  },
+  "homepage": "https://github.com/mikedevelops/draggable#readme",
+  "devDependencies": {
+    "@types/jest": "^21.1.1",
+    "eslint": "^4.8.0",
+    "jest": "^21.2.1",
+    "source-map-loader": "^0.2.2",
+    "ts-jest": "^21.0.1",
+    "ts-loader": "^2.3.7",
+    "typescript": "^2.5.3",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1",
+    "webpack-html-plugin": "^0.1.1"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  }
+}
