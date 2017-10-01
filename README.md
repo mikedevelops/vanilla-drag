@@ -4,13 +4,13 @@ A _tiny_ (5KB) package to allow free dragging of HTML elements.
 
 ## Installation
 
-```
+```shell
 npm install --save vanilla-drag
 ```
 
 ## Getting Started
 
-```
+```javascript
 import VanillaDrag from 'vanilla-drag';
 
 const target = document.getElementById('target');
