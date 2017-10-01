@@ -2,10 +2,13 @@ const path = require('path');
 const HTML = require('webpack-html-plugin'); 
 
 const config = {
-    entry: path.join(__dirname, 'src/Draggable.ts'),
+    entry: {
+        'vanillaDrag': path.join(__dirname, 'src/VanillaDrag.ts'),
+        'example': path.join(__dirname, 'src/example.ts')
+    },
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'draggable.bundle.js',
+        filename: '[name].bundle.js',
         libraryTarget: 'umd'
     },
     resolve: {
@@ -21,7 +24,7 @@ const config = {
         new HTML({
             filename: 'index.html',
             template: 'example/index.html',
-            inject: 'head'
+            inject: 'body'
         })
     ]
 };

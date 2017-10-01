@@ -12,12 +12,26 @@
             position: fixed;
             width: 100px;
         }
+
+        #target:hover {
+            cursor: move;
+            cursor: grab;
+            cursor: -moz-grab;
+            cursor: -webkit-grab;
+        }
+        
+        #target:active {
+            cursor: grabbing;
+            cursor: -moz-grabbing;
+            cursor: -webkit-grabbing;
+        }
     </style>
 </head>
 <body>
+    <h1>Vanilla Drag</h1>
+    <p>A <em>tiny</em> (5KB) package to allow free dragging of HTML elements.</p>
+    <a style="margin-bottom: 1rem; display: block" href="https://github.com/mikedevelops/draggable">https://github.com/mikedevelops/draggable</a>
     <div id="target"></div>
-    <script>
-        const example = new Draggable.default(window, document.getElementById('target'));
-    </script>
+    <script src="/example.bundle.js"></script>
 </body>
 </html>

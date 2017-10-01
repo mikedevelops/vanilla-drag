@@ -3,13 +3,13 @@ interface Coordinate {
     y: number
 }
 
-class Draggable {
+class VanillaDrag {
     private dragging: boolean;
     private origin: Coordinate;
     private elementRectCache: ClientRect;
 
     /**
-     * Draggable
+     * VanillaDrag
      * @param root 
      * @param element 
      */
@@ -80,4 +80,4 @@ class Draggable {
     }
 }
 
-module.exports = Draggable;
+export = VanillaDrag;
