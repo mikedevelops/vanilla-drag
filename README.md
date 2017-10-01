@@ -2,6 +2,8 @@
 
 A _tiny_ (5KB) package to allow free dragging of HTML elements.
 
+[Example](http://michaelsmart.co.uk/playground/vanilla-drag)
+
 ## Installation
 
 ```shell
