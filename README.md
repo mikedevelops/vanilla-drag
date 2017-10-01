@@ -31,4 +31,4 @@ The current context's window object. 99% of the time this will always be a case 
 
 ### [HTMLElement]
 
-An instance of a `HTMLElement` that will have dragging enabled. Jquery users can access an instance of this object using the following jQuery index / method `$('#target')[0]` or `$('#target').get(0)`. For Jquery collections containing multiple elements, the collection will need to be iterated over and a separate instance of VanillaDrag created for each item.
+An instance of a `HTMLElement` that will have dragging enabled. Jquery users can access an instance of this object using the following Jquery index / method `$('#target')[0]` or `$('#target').get(0)`. For Jquery collections containing multiple elements, the collection will need to be iterated over and a separate instance of VanillaDrag created for each item.
