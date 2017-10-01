@@ -1,4 +1,4 @@
-const Draggable = require('../../src/Draggable');
+const VanillaDrag = require('../../src/VanillaDrag');
 
 describe('Drag', () => {
     let drag;
@@ -18,7 +18,7 @@ describe('Drag', () => {
                 transform: ''
             }
         };
-        drag = new Draggable(windowMock, element);
+        drag = new VanillaDrag(windowMock, element);
     });
 
     describe('init', () => {
