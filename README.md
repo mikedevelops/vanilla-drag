@@ -21,7 +21,7 @@ const drag = new VanillaDrag(window, target);
 
 The VanillaDrag constructor takes two arguments.
 
-```
+```javascript
 new VanillaDrag([window], [HTMLElement])
 ```
 
