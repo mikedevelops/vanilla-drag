@@ -2,13 +2,14 @@
   "name": "vanilla-drag",
   "version": "1.0.8",
   "description": "JavaScript draggable HTML elements",
-  "main": "dist/draggable.bundle.js",
+  "main": "dist/VanillaDrag.js",
   "scripts": {
     "lint": "eslint ./**/*.js",
     "watch": "NODE_ENV=dev webpack-dev-server",
     "test": "jest",
     "test:watch": "jest --watch --coverage",
-    "production": "npm run lint && npm run test && NODE_ENV=production webpack"
+    "production": "npm run lint && npm run test && NODE_ENV=production webpack",
+    "prepublishOnly": "tsc -p ./ --outDir dist/"
   },
   "repository": {
     "type": "git",
