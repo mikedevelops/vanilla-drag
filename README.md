@@ -1,5 +1,7 @@
 # Vanilla Drag
 
+[![Build Status](https://travis-ci.org/mikedevelops/vanilla-drag.svg?branch=master)](https://travis-ci.org/mikedevelops/vanilla-drag)
+
 A _tiny_ (5KB) package to allow free dragging of HTML elements.
 
 [Example](http://michaelsmart.co.uk/playground/vanilla-drag)
