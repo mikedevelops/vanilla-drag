@@ -1,10 +1,9 @@
 const path = require('path');
-const HTML = require('webpack-html-plugin'); 
+const HTML = require('webpack-html-plugin');
 
 const config = {
     entry: {
-        'vanillaDrag': path.join(__dirname, 'src/VanillaDrag.ts'),
-        'example': path.join(__dirname, 'src/example.ts')
+        'vanillaDrag': path.join(__dirname, 'src/VanillaDrag.ts')
     },
     output: {
         path: path.join(__dirname, 'dist'),

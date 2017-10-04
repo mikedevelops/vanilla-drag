@@ -10,8 +10,8 @@ class VanillaDrag {
 
     /**
      * VanillaDrag
-     * @param root 
-     * @param element 
+     * @param root
+     * @param element
      */
     constructor (
         private root: Window,
@@ -27,7 +27,7 @@ class VanillaDrag {
 
     /**
      * Handle drag start
-     * @param event 
+     * @param event
      */
     public handleMouseDown (event: MouseEvent): void {
         this.elementRectCache = this.element.getBoundingClientRect();
@@ -42,9 +42,9 @@ class VanillaDrag {
         if (this.outOfBounds(pageX, pageY, 0, this.root.innerWidth, 0, this.root.innerHeight)) {
             this.dragging = false;
         }
-        
+
         if (this.dragging || event.type === 'resize') {
-            const { width, height } = this.elementRectCache; 
+            const { width, height } = this.elementRectCache;
             const { x, y } = this.origin;
 
             this.element.style.right = `${this.root.innerWidth - (pageX - x + width)}px`;
@@ -61,19 +61,19 @@ class VanillaDrag {
 
     /**
      * Check if an element is out of bounds
-     * @param nodeX 
-     * @param nodeY 
-     * @param boundsMinX 
-     * @param boundsMaxX 
-     * @param boundsMinY 
-     * @param boundsMaxY 
+     * @param nodeX
+     * @param nodeY
+     * @param boundsMinX
+     * @param boundsMaxX
+     * @param boundsMinY
+     * @param boundsMaxY
      */
     public outOfBounds (
-        x: number, 
-        y: number, 
-        boundsMinX: number, 
-        boundsMaxX: number, 
-        boundsMinY: number, 
+        x: number,
+        y: number,
+        boundsMinX: number,
+        boundsMaxX: number,
+        boundsMinY: number,
         boundsMaxY: number
     ): boolean {
         return x <= boundsMinX || x >= boundsMaxX || y <= boundsMinY || y >= boundsMaxY;
