@@ -68,7 +68,7 @@ describe('Drag', () => {
         test('should update element style if in bounds', () => {
             drag.outOfBounds.mockReturnValue(false);
             drag.origin = { x: 5, y: 5 };
-            element.elementRectCache = { width: 10, height: 10 };
+            drag.elementRectCache = { width: 10, height: 10 };
             drag.dragging = true;
             drag.handleMouseMove({ pageX: 10, pageY: 10 });
 
