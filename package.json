@@ -9,7 +9,7 @@
     "watch": "NODE_ENV=dev webpack-dev-server",
     "test": "jest",
     "test:watch": "jest --watch --coverage",
-    "production": "npm run lint && npm run test && NODE_ENV=production webpack -p",
+    "production": "npm run lint && npm run test && NODE_ENV=production webpack",
     "prepublishOnly": "npm run production"
   },
   "repository": {
