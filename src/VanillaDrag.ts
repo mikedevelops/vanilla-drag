@@ -3,7 +3,7 @@ interface Coordinate {
     y: number
 }
 
-class VanillaDrag {
+export default class VanillaDrag {
     private dragging: boolean;
     private origin: Coordinate;
     private elementRectCache: ClientRect;
@@ -80,5 +80,3 @@ class VanillaDrag {
         return x <= boundsMinX || x >= boundsMaxX || y <= boundsMinY || y >= boundsMaxY;
     }
 }
-
-export = VanillaDrag;

@@ -1,4 +1,4 @@
-const VanillaDrag = require('../../src/VanillaDrag');
+const VanillaDrag = require('../../src/VanillaDrag').default;
 
 describe('Drag', () => {
     let drag;
