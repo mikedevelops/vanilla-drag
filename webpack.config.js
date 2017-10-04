@@ -4,7 +4,7 @@ const config = {
     entry: path.join(__dirname, 'src/VanillaDrag.ts'),
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'vanilla-drag.js',
+        filename: 'VanillaDrag.js',
         libraryTarget: 'umd'
     },
     resolve: {

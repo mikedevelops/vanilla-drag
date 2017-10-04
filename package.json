@@ -2,8 +2,8 @@
   "name": "vanilla-drag",
   "version": "1.0.18",
   "description": "JavaScript draggable HTML elements",
-  "main": "dist/vanilla-drag.js",
-  "types": "dist/vanilla-drag.d.ts",
+  "main": "dist/vanillaDrag.js",
+  "types": "dist/vanillaDrag.d.ts",
   "scripts": {
     "lint": "eslint ./**/*.js",
     "watch": "NODE_ENV=dev webpack-dev-server",
