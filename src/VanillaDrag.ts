@@ -45,7 +45,7 @@ export default class VanillaDrag {
         }
 
         if (this.dragging || event.type === 'resize') {
-            const { width, height } = this.elementRectCache;
+            const { width, height } = this.elementRectCache || this.element.getBoundingClientRect();
             const { x, y } = this.origin;
 
             this.element.style.right = `${this.root.innerWidth - (pageX - x + width)}px`;

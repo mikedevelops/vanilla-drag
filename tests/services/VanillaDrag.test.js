@@ -68,7 +68,18 @@ describe('Drag', () => {
         test('should update element style if in bounds', () => {
             drag.outOfBounds.mockReturnValue(false);
             drag.origin = { x: 5, y: 5 };
-            drag.elementRectCache = { width: 10, height: 10 };
+            element.elementRectCache = { width: 10, height: 10 };
+            drag.dragging = true;
+            drag.handleMouseMove({ pageX: 10, pageY: 10 });
+
+            expect(element.style.right).toEqual('35px');
+            expect(element.style.bottom).toEqual('35px');
+        });
+
+        test('should handle being invoked without an element cache', () => {
+            drag.outOfBounds.mockReturnValue(false);
+            drag.origin = { x: 5, y: 5 };
+            element.getBoundingClientRect.mockReturnValue({ width: 10, height: 10 });
             drag.dragging = true;
             drag.handleMouseMove({ pageX: 10, pageY: 10 });
 
