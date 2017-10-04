@@ -15,7 +15,8 @@ describe('Drag', () => {
             addEventListener: jest.fn(),
             getBoundingClientRect: jest.fn(),
             style: {
-                transform: ''
+                transform: '',
+                position: ''
             }
         };
         drag = new VanillaDrag(windowMock, element);
@@ -23,6 +24,7 @@ describe('Drag', () => {
 
     describe('init', () => {
         test('it should attach event handlers', () => {
+            expect(element.style.position).toEqual('fixed');
             expect(windowMock.addEventListener).toHaveBeenCalled();
             expect(windowMock.addEventListener.mock.calls[0][0]).toEqual('mousemove');
             expect(element.addEventListener).toHaveBeenCalledTimes(2);
@@ -88,7 +90,7 @@ describe('Drag', () => {
         test('should return false if off left', () => {
             expect(drag.outOfBounds(-10, 10, 0, 100, 0, 100)).toBeTruthy();
         });
-        
+
         test('should return false if off right', () => {
             expect(drag.outOfBounds(200, 10, 0, 100, 0, 100)).toBeTruthy();
         });
@@ -96,11 +98,11 @@ describe('Drag', () => {
         test('should return false if off top', () => {
             expect(drag.outOfBounds(10, -10, 0, 100, 0, 100)).toBeTruthy();
         });
-        
+
         test('should return false if off bottom', () => {
             expect(drag.outOfBounds(10, 200, 0, 100, 0, 100)).toBeTruthy();
         });
-        
+
         test('should return true if in bounds', () => {
             expect(drag.outOfBounds(10, 10, 0, 100, 0, 100)).toBeFalsy();
         });

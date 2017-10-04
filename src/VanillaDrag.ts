@@ -19,6 +19,7 @@ class VanillaDrag {
     ) {
         this.dragging = false;
         this.origin = { x: 0, y: 0 };
+        this.element.style.position = 'fixed';
         this.element.addEventListener('mousedown', this.handleMouseDown.bind(this));
         this.element.addEventListener('mouseup', this.handleMouseUp.bind(this));
         this.root.addEventListener('mousemove', this.handleMouseMove.bind(this));
