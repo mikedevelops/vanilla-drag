@@ -1,5 +1,4 @@
 const path = require('path');
-const HTML = require('webpack-html-plugin');
 
 const config = {
     entry: {
@@ -18,14 +17,7 @@ const config = {
             { test: /\.ts?$/, loader: 'source-map-loader', enforce: 'pre' },
             { test: /\.ts?$/, loader: 'ts-loader' }
         ]
-    },
-    plugins: [
-        new HTML({
-            filename: 'index.html',
-            template: 'example/index.html',
-            inject: 'body'
-        })
-    ]
+    }
 };
 
 if (process.env.NODE_ENV === 'dev') {
