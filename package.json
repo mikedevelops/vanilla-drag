@@ -1,6 +1,6 @@
 {
   "name": "vanilla-drag",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "JavaScript draggable HTML elements",
   "main": "dist/VanillaDrag.js",
   "types": "dist/VanillaDrag.d.ts",
