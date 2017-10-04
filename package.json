@@ -3,7 +3,7 @@
   "version": "1.0.15",
   "description": "JavaScript draggable HTML elements",
   "main": "dist/VanillaDrag.js",
-  "types": "dist/VanillaDrag.d.ts",
+  "types": "index.d.ts",
   "scripts": {
     "lint": "eslint ./**/*.js",
     "watch": "NODE_ENV=dev webpack-dev-server",
