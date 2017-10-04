@@ -1,12 +1,10 @@
 const path = require('path');
 
 const config = {
-    entry: {
-        'vanillaDrag': path.join(__dirname, 'src/VanillaDrag.ts')
-    },
+    entry: path.join(__dirname, 'src/VanillaDrag.ts'),
     output: {
         path: path.join(__dirname, 'dist'),
-        filename: 'VanillaDrag.js',
+        filename: 'vanilla-drag.js',
         libraryTarget: 'umd'
     },
     resolve: {
