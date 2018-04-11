@@ -31,7 +31,7 @@ new VanillaDrag([window], [HTMLElement])
 
 ### [window]
 
-The current context's window object. 99% of the time this will always be a case of passing in the global variable `window`.
+The current context's window object. 99% of the time this will always be a case of passing in the global `window` object.
 
 ### [HTMLElement]
 
