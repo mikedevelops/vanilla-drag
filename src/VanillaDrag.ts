@@ -3,6 +3,8 @@ interface Coordinate {
     y: number
 }
 
+console.log("test");
+
 export default class VanillaDrag {
     private dragging: boolean;
     private origin: Coordinate;
